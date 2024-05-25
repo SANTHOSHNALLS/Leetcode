@@ -1,0 +1,21 @@
+class Solution {
+    public int reverse(int x) {
+      int t=Math.abs(x) ;
+            int templast=0;
+      int t1=x;
+      long k=0;
+      while(t>0){
+        int e=t%10;
+          k=k*10+e;
+          t/=10;
+          
+      }
+            if(k<=Integer.MIN_VALUE || k>=Integer.MAX_VALUE) {
+        return 0;
+      }
+      else{
+      if(x>0) return (int)k;
+      else return (int)-k; 
+    }
+    }
+}

@@ -1,0 +1,15 @@
+class Solution {
+    public int[] createTargetArray(int[] nums, int[] index) {
+       //int ans[]=new int[nums.length];
+       LinkedList<Integer> l=new LinkedList<Integer>();
+       for(int i=0;i<nums.length;i++){
+         l.add(index[i],nums[i]);  
+       } 
+       Integer[] a=l.toArray(new Integer[l.size()]);
+       int ans[]=new int[a.length];
+       for(int i=0;i<a.length;i++){
+           ans[i]=a[i];
+       }
+       return ans;
+    }
+}

@@ -1,0 +1,25 @@
+class Solution {
+    public int romanToInt(String s) {
+        String ar[]=s.split("");
+        int x=0;
+        int len=ar.length;
+        int arr[]=new int[len];
+        for(int i=0;i<len;i++){
+          if(ar[i].equals("I")) arr[i]=1;
+          else if(ar[i].equals("V")) arr[i]=5;
+          else if(ar[i].equals("X")) arr[i]=10;
+          else if(ar[i].equals("L")) arr[i]=50;
+          else  if(ar[i].equals("C")) arr[i]=100;
+          else  if(ar[i].equals("D")) arr[i]=500;
+          else  if(ar[i].equals("M")) arr[i]=1000;
+        }
+          int n=arr.length;
+        for(int i=0;i<n-1;i++){
+          if(arr[i]>=arr[i+1]) x+=arr[i];
+          else x-=arr[i];
+        }
+        x+=arr[n-1];
+      
+        return x;
+    }
+}

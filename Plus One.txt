@@ -1,0 +1,18 @@
+import java.math.*;
+class Solution {
+    public int[] plusOne(int[] digits) {
+        String s="";
+        for(int i=0;i<digits.length;i++){
+            s+=digits[i];
+        }
+        BigInteger bg=new BigInteger(s);
+        bg=bg.add(BigInteger.ONE);
+        s=bg.toString();
+        String s1[]=s.split("");
+        int ar[]=new int[s.length()];
+        for(int i=0;i<s.length();i++){
+            ar[i]=Integer.parseInt(s1[i]);
+        }
+        return ar;
+    }
+}
